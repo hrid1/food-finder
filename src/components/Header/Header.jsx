@@ -15,10 +15,6 @@ const Header = () => {
         {" "}
         <Link to="/contact-us">Contact Us</Link>
       </li>
-      <li>
-        {" "}
-        <Link to="/">Home</Link>
-      </li>
     </>
   );
   return (
@@ -44,15 +40,15 @@ const Header = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow font-semibold"
             >
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost text-2xl">FooD Finder</a>
+          <a className="btn btn-ghost font-bold text-2xl text-white">FooD Finder</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+          <ul className="menu menu-horizontal px-1 font-semibold text-lg">{navLinks}</ul>
         </div>
         <div className="navbar-end">
           <a className="btn bg-slate-800">Log In</a>
