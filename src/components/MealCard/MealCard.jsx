@@ -1,10 +1,9 @@
 import PropTypes from "prop-types";
-
+import { Link } from "react-router-dom";
 
 const MealCard = ({ meal }) => {
-  const { strMeal, strMealThumb } = meal;
+  const { strMeal, strMealThumb, idMeal } = meal;
 
-  
   return (
     <>
       <div className="card h-full bg-gray-900  shadow-xl">
@@ -15,7 +14,7 @@ const MealCard = ({ meal }) => {
           <h2 className="md:card-title">{strMeal}</h2>
           <p>{}</p>
           <div className="card-actions">
-            {/* <button className="btn btn-primary">Buy Now</button> */}
+            <button className="btn btn-primary"> <Link to={`/meal/${idMeal}`}>Bye now</Link> </button>
           </div>
         </div>
       </div>

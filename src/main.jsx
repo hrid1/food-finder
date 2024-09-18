@@ -6,11 +6,14 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./components/Root/Root.jsx";
 import Home from "./components/Home/Home.jsx";
 import Categories from "./components/Categories/Categories.jsx";
+import SingleMeal from "./components/SingleMeal/SingleMeal.jsx";
+import ErrorPage from "./components/ErrorPage/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children:[
       {
         path: "/",
@@ -21,6 +24,11 @@ const router = createBrowserRouter([
         path: "/category/:categoryName",
         loader: ({params}) => fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${params.categoryName}`),
         element: <Categories></Categories>
+      },
+      {
+        path: "/meal/:mealId",
+        loader: ({params}) => fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.mealId}`),
+        element: <SingleMeal></SingleMeal>
       }
      
     

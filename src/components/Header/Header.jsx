@@ -48,7 +48,7 @@ const Header = () => {
           <a className="btn btn-ghost font-bold text-2xl text-white">FooD Finder</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 font-semibold text-lg">{navLinks}</ul>
+          <ul className="menu menu-horizontal px-1 font-semibold text-md">{navLinks}</ul>
         </div>
         <div className="navbar-end">
           <a className="btn bg-slate-800">Log In</a>
